@@ -18,7 +18,7 @@ class PokemonDataLoader
   API_BASE_URL = 'https://pokeapi.co/api/v2/'
 
   def self.load_pokemon_data
-    limit = 250
+    limit = 1017
     pokemon_list_url = "#{API_BASE_URL}pokemon?limit=#{limit}"
 
     data = fetch_data_from_url(pokemon_list_url)
