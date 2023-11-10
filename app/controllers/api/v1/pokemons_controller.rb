@@ -43,6 +43,7 @@ class Api::V1::PokemonsController < ApplicationController
   end
 
   private
+
   def pokemon_params
     params.require(:pokemon).permit(:name, :order, :base_experience, :height, :weight, types: [])
   end
