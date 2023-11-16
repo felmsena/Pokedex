@@ -35,6 +35,15 @@
    rails db:setup
    ```
 
+## Local Enviroments
+
+1. **To set up the local enviroments, create a .env file in the root of the project and add the following variables:**
+
+   ```bash
+   POKEAPI_URL = STRING #url of pokeapi
+   POKEMON_API_LIMIT = INT #limit of pokemons to be imported from pokeapi
+   ```
+
 ## Running the application
 1. **Start the Rails server**
 
