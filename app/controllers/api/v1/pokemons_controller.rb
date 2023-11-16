@@ -1,7 +1,9 @@
 class Api::V1::PokemonsController < ApplicationController
+  include Pagy::Backend
   def index
-    pokemons = Pokemon.all
-    render json: pokemons, status: :ok
+    paginated_pokemons = pagy(Pokemon.all, items: 20)
+
+    render json: paginated_pokemons.as_json, status: :ok
   end
 
   def show
